@@ -1,25 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import logo from './assests/icon.png'
+import MainPage  from './components/main-page/main-page.component';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <nav className='navigation-bar'>
+        <img src={logo} alt='logo' />
+      </nav>
+      <h3 className='sub-heading'>Let's calculate <b>distance</b> from Google maps</h3>
+      <MainPage />
+    </>
+  )
 }
 
 export default App;

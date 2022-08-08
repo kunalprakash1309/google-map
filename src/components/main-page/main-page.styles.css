@@ -1,0 +1,10 @@
+.main-page-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.mapContainerStyle {
+  width: 500px;
+  height: 400px;
+}
