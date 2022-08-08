@@ -5,8 +5,6 @@ import { GoogleMap, useLoadScript } from '@react-google-maps/api';
 
 import './main-page.styles.css';
 
-console.log("env",process.env.REACT_APP_MAP_API_KEY)
-
 const MainPage = () => {
 
   const [result, setResult] = useState(null)
@@ -24,7 +22,7 @@ const MainPage = () => {
       
         <div className='main-page-container'>
             
-            <InputPage setResult={setResult}/>
+            <InputPage setResult={setResult} result={result}/>
             <GoogleMap 
               mapContainerClassName="mapContainerStyle" 
               center={center} 

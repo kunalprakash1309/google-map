@@ -2,8 +2,7 @@ import { Autocomplete } from '@react-google-maps/api'
 import { useState } from 'react'
 import './input-page.styles.css'
 
-
-const InputPage = ({setResult}) => {
+const InputPage = ({setResult, result}) => {
 
   const [origin, setOrigin] = useState(null)
   const [destination, setDestination] = useState(null)
@@ -59,7 +58,13 @@ const InputPage = ({setResult}) => {
         <span className='distance-result'>{distance}</span>
       </div>
 
-      <p> The distance between <b>{originName}</b> and <b>{destinationName}</b> is <b>{distance}</b></p>
+      {
+        result 
+          ? 
+        <p> The distance between <b>{originName}</b> and <b>{destinationName}</b> is <b>{distance}</b></p>
+          :
+        null
+      }
     </div>
   )
 }
