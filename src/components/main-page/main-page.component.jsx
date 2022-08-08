@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import InputPage from '../input-page/input-page.component.jsx';
 import MapConatiner from '../map/map.component';
+import { GoogleMap, useLoadScript } from '@react-google-maps/api';
 
 import './main-page.styles.css';
 
-import { useMemo } from 'react';
-
-import { GoogleMap, LoadScript, useLoadScript, Autocomplete, Marker } from '@react-google-maps/api';
+console.log("env",process.env.REACT_APP_MAP_API_KEY)
 
 const MainPage = () => {
 

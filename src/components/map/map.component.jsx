@@ -1,11 +1,9 @@
 import './map.styles.css'
-import { DirectionsService, DirectionsRenderer } from '@react-google-maps/api'
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { DirectionsRenderer } from '@react-google-maps/api'
 
 
 const MapConatiner = ({result}) => {
 
-  console.log("result", result)
   return (
         result ? 
         result.routes.map((route, i) => (
@@ -22,9 +20,3 @@ const MapConatiner = ({result}) => {
 }
 
 export default MapConatiner
-
-{/* <DirectionsRenderer
-options={{
-  directions: result
-}}
-/>  */}

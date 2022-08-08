@@ -20,7 +20,7 @@ const InputPage = ({setResult}) => {
   }
 
   const onPlaceChanged = () => {
-    console.log("Bye",origin.getPlace(), destination.getPlace())
+    //console.log("Bye",origin.getPlace(), destination.getPlace())
   }
 
   const calculateRoute = async () => {
@@ -33,11 +33,9 @@ const InputPage = ({setResult}) => {
     })
     setResult(results)
     setdistance(results.routes[0].legs[0].distance.text)
-    console.log("origin Name",origin.getPlace().name)
     setOriginName(origin.getPlace().name)
     setDestinationName(destination.getPlace().name)
   }
-  //console.log("origin Name",originName)
   return (
     <div className='input-container'>
       <div className='input-box'>
